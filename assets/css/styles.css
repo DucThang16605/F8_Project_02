@@ -1,0 +1,768 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --font-heading: Sen, san-serif;
+    --primary-color: #ffb900;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ======================= Common ========================== */
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 118px;
+    border-radius: 24.5px;
+    line-height: 50px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+    background: #171100;
+    color: #ffffff;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.main-content {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.word-break-all {
+    word-break: break-all;
+}
+
+/* ======================= Header ========================== */
+.header {
+    background: #fffcf4;
+}
+
+.header.fixed {
+    position: sticky;
+    top: -28px;
+    z-index: 1;
+}
+
+.header .body {
+    display: flex;
+    padding: 36px 0 8px;
+    align-items: center;
+}
+
+.nav {
+    margin-left: auto;
+    margin-right: 55px;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav ul li a {
+    margin-left: 12px;
+    padding: 8px 15px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #5f5b53;
+}
+
+.nav li.active a,
+.nav a:hover {
+    position: relative;
+    text-shadow: 1px 0 0 currentColor;
+    color: #171100;
+}
+
+.nav li.active a::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 12px;
+    height: 2px;
+    border-radius: 1px;
+    background: #171100;
+    left: 15px;
+    bottom: 6px;
+}
+
+.header .action .sign-up-btn {
+    min-width: 144px;
+}
+
+/* ======================= Hero ========================== */
+.hero {
+    padding: 56px 0 65px;
+    background: #fffcf4;
+}
+
+.hero .body {
+    display: flex;
+}
+
+.hero .media-block {
+    position: relative;
+    width: 48.7%;
+}
+
+.hero .media-block .img {
+    width: 470px;
+    height: 685px;
+    object-fit: cover;
+    border-radius: 20px;
+    vertical-align: bottom;
+}
+
+.hero .hero-summary {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    width: 270px;
+    padding: 24px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0px 16px 32px 0px #0000000d;
+}
+
+.hero .hero-summary .item {
+    display: flex;
+    align-items: center;
+}
+
+.hero .hero-summary .item + .item {
+    margin-top: 22px;
+}
+
+.hero-summary .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #fff9e8;
+}
+
+.hero-summary .item:nth-child(2) .icon {
+    background: #fcefff;
+}
+
+.hero-summary .item:nth-child(3) .icon {
+    background: #ebeaff;
+}
+
+.hero-summary .info {
+    margin-left: 16px;
+}
+
+.hero-summary .info .lable {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #5f5b53;
+}
+
+.hero-summary .info .title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    color: #171100;
+}
+
+.hero .content-block {
+    width: 51.3%;
+    margin: 64px 0 0 130px;
+}
+
+.hero .content-block .heading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 5.8rem;
+    line-height: 68px;
+    letter-spacing: -2%;
+    color: #171100;
+}
+
+.hero .content-block .desc {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 30px;
+    margin-top: 22px;
+    color: #5f5b53;
+}
+
+.hero .content-block .cta-group {
+    display: flex;
+    align-items: center;
+    margin: 38px 0 48px 0;
+}
+
+.hero .content-block .hero-cta {
+    min-width: 180px;
+    line-height: 64px;
+    border-radius: 32px;
+    background: var(--primary-color);
+}
+
+.hero .content-block .watch-video {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    border: none;
+    margin-left: 28px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.hero .content-block .watch-video .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0px 8px 16px 0px #00000012;
+}
+
+.hero .content-block .watch-video span {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 30px;
+    color: #171100;
+    margin-left: 14px;
+}
+
+.hero .content-block .stats {
+    margin-top: 8px;
+}
+
+.hero .content-block .stats strong {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 4.4rem;
+    line-height: 54px;
+    color: #171100;
+    margin-right: 6px;
+}
+.hero .content-block .stats strong:last-child {
+    margin-left: 28px;
+}
+
+/* ======================= Popular ========================== */
+.popular {
+    margin-top: 200px;
+}
+
+.popular .popular-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular .popular-top .heading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 3.8rem;
+    line-height: 48px;
+    letter-spacing: -2%;
+    color: #171100;
+}
+
+.popular .popular-top .desc {
+    width: 458px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 30px;
+    color: #5f5b53;
+    margin-top: 16px;
+}
+
+.popular .popular-top .controls {
+    display: flex;
+    gap: 18px;
+}
+
+.popular .popular-top .controls .control-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    border-radius: 50%;
+}
+
+.popular .popular-top .controls .control-btn:hover {
+    color: #fff;
+    background: var(--primary-color);
+    cursor: pointer;
+}
+
+/* ======================= Course-List ========================== */
+.course-list {
+    display: flex;
+    gap: 30px;
+    margin-top: 55px;
+}
+
+.course-list .course-item {
+    border-radius: 12px;
+    box-shadow: 0px 18px 36px 0px #0000000d;
+    border: 1px solid #e2dfda;
+}
+
+.course-list .course-item:hover {
+    border-color: transparent;
+    box-shadow: 0px 18px 36px 0px #0000000d;
+}
+
+.course-list .course-item .thumb {
+    width: calc(100% + 2px);
+    height: 278px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    margin: -1px;
+}
+
+.course-list .course-item .info {
+    padding: 16px 22px 22px;
+}
+
+.course-list .course-item .head,
+.course-list .course-item .head .rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course-list .course-item .head .title a {
+    padding-right: 6px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 30px;
+    color: #171100;
+}
+
+.course-list .course-item .head .rating .value {
+    display: block;
+    margin-left: 6px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #fea31b;
+}
+
+.course-list .course-item .desc {
+    width: 326px;
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 6px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 26px;
+    color: #5f5b53;
+}
+
+.course-list .course-item .foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.course-list .course-item .foot .price {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 30px;
+}
+
+.course-list .course-item .foot .btn {
+    font-weight: 600;
+    font-size: 1.4rem;
+    border: none;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.course-list .course-item .foot .btn:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+}
+
+/* ======================= Feedback ========================== */
+.feedback {
+    margin-top: 200px;
+    background: #2e2100;
+}
+
+.feedback .feedback-item {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 96px 0;
+}
+
+.feedback .feedback-item .info .avt {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feedback .feedback-item .info .title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 34px;
+    color: #f7f7f7;
+    margin-top: 18px;
+}
+
+.feedback .feedback-item .info .desc {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 26px;
+    margin-top: 4px;
+    color: #bfbcb2;
+}
+
+.feedback .feedback-item .info .dots {
+    display: flex;
+    gap: 6px;
+}
+
+.feedback .feedback-item .info .dot {
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #634700;
+    margin-top: 28px;
+}
+
+.feedback .feedback-item .info .dot:nth-child(2) {
+    background: var(--primary-color);
+}
+
+.feedback .feedback-item .content {
+    position: relative;
+    width: 65.8%;
+}
+
+.feedback .feedback-item .content .quote-mark {
+    position: absolute;
+    left: -30px;
+    top: -28px;
+}
+
+.feedback .feedback-item .content blockquote {
+    font-weight: 400;
+    font-style: Italic;
+    font-size: 2.6rem;
+    line-height: 40px;
+    color: #ffffff;
+}
+
+/* ======================= Features ========================== */
+.feature {
+    margin-top: 200px;
+}
+
+.feature .body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 130px;
+}
+
+.feature .body .images {
+    display: flex;
+    gap: 30px;
+}
+
+.feature .body .images img {
+    width: 270px;
+    height: 404px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.feature .body .images img:first-child {
+    margin-top: 34px;
+}
+
+.feature .body .content .heading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 3.8rem;
+    line-height: 48px;
+    letter-spacing: -2%;
+    color: #171100;
+}
+
+.feature .body .content .desc {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 28px;
+    color: #5f5b53;
+    margin-top: 16px;
+}
+
+.feature .body .content .btn-feature {
+    min-width: 137px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-top: 32px;
+    background: var(--primary-color);
+}
+
+.feature .body-2 {
+    margin-top: 166px;
+}
+
+.feature .body-2 .images img {
+    width: 470px;
+    height: 440px;
+}
+
+/* ======================= Blog ========================== */
+.blog {
+    margin-top: 200px;
+    padding: 96px 0;
+    background: #fffcf4;
+}
+
+.blog .blog-top {
+    margin: 0 auto;
+}
+
+.blog .blog-top .heading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 3.8rem;
+    line-height: 48px;
+    letter-spacing: -2%;
+    color: #130606;
+    text-align: center;
+}
+
+.blog .blog-top .desc {
+    width: 448px;
+    margin: 16px auto 0;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 28px;
+    color: #696262;
+    text-align: center;
+}
+
+.blog .blog-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 55px;
+}
+
+.blog .blog-list .blog-item {
+    width: 370px;
+    background: #ffffff;
+    border-radius: 16px;
+}
+
+.blog .blog-list .blog-item:hover {
+    box-shadow: 0px 16px 32px 0px #0000000d;
+}
+
+.blog .blog-list .blog-item .thumb {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.blog .blog-list .blog-item .blog-body {
+    padding: 20px 20px 28px;
+}
+
+.blog .blog-item .blog-body .date {
+    position: relative;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 26px;
+    color: #5f5b53;
+    margin-left: 10px;
+}
+
+.blog .blog-item .blog-body .date::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    top: 7px;
+    left: -10px;
+}
+
+.blog .blog-item .blog-body .line {
+    display: block;
+    width: 160px;
+    height: 1px;
+    border-radius: 0.5px;
+    background: #e2dfda;
+    margin-top: 12px;
+}
+
+.blog .blog-item .blog-body .title a {
+    display: block;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 28px;
+    color: #171100;
+    margin-top: 12px;
+}
+
+.blog .blog-item .blog-body .btn {
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    transition: all ease 0.3s;
+}
+
+.blog .blog-item .blog-body .btn:hover {
+    background: #ffb900;
+}
+
+.blog .dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 38px;
+}
+
+.blog .dots .dot {
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #5f5b53;
+}
+
+.blog .dots .dot:nth-child(2) {
+    background: var(--primary-color);
+}
+
+/* ======================= Footer ========================== */
+.footer {
+    padding: 96px 0 28px;
+    background: #2e2100;
+}
+
+.footer .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .row .column {
+    width: 21.6%;
+}
+
+.footer .row .column:first-child {
+    width: 35%;
+}
+
+.footer .row .column .desc {
+    max-width: 267px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #bfbcb2;
+    margin-top: 18px;
+}
+
+.footer .row .column .social {
+    display: flex;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.footer .row .column .heading {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 28px;
+    color: #ffffff;
+}
+
+.footer .row .column .line-1 {
+    width: 130px;
+    height: 1px;
+    background: #59554b;
+    margin-top: 14px;
+}
+
+.footer .row .column .list {
+    margin-top: 28px;
+}
+
+.footer .row .column .list li a {
+    display: block;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 26px;
+    margin-top: 12px;
+    color: #bfbcb2;
+}
+
+.footer .row .column .list li a:hover {
+    opacity: 0.9;
+}
+
+.footer .row .column .list li strong {
+    font-weight: 600;
+    color: #fff;
+}
+
+.footer .line-2 {
+    width: 100%;
+    height: 1px;
+    background: #59554b;
+    margin-top: 38px;
+}
+
+.footer .copyright {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    color: #807d74;
+    margin-top: 28px;
+}
